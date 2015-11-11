@@ -1,0 +1,27 @@
+//break points
+
+@mixin breakpoint1 {
+    @media (max-width: 700px) {
+        @content;
+    }
+}
+
+
+@mixin breakpoint2 {
+    @media (max-width: 900px) {
+        @content;
+    }
+}
+
+$breakpoints: '1' 1024px, '2' 2048px, '3' 1600px;
+
+
+@mixin stubHubContent($breakpoint: 600px) {
+	#stubHubContent {
+		background-color:white;
+		width:$breakpoint;
+		.title{
+			color:black;
+		}
+	}
+}

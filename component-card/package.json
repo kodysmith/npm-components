@@ -1,0 +1,16 @@
+{
+  "name": "component-card",
+  "version": "1.0.0",
+  "description": "card component, including models, views, and css, less, sass",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "card",
+    "view"
+  ],
+  "author": "Kody Smith",
+  "license": "ISC",
+  "publishConfig":{"registry":"http://localhost:4873"}
+}

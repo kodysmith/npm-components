@@ -1,0 +1,20 @@
+//breakpoints
+
+$bpIphone6: 720px;
+$bpIphone5: 700px;
+
+
+$bp1PhoneList: 
+	'Galaxy' 700px green,
+	'nexius' 700px red,
+	'Iphone5' 700px white,
+	'windows' 700px black;
+
+
+@each $phone in $bp1PhoneList {
+	.#{nth($phone,1)} {
+		@media(nth($phone, 2)){
+			background-color: nth($phone, 3);
+		}
+	}
+}

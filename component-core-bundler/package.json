@@ -1,0 +1,16 @@
+{
+  "name": "component-core-bundler",
+  "version": "1.0.0",
+  "description": "core bundler component, including models, views, and css, less, sass",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "bundler",
+    "view"
+  ],
+  "author": "Kody Smith",
+  "license": "ISC",
+  "publishConfig":{"registry":"http://localhost:4873"}
+}

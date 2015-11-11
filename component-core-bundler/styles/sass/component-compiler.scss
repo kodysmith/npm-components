@@ -1,0 +1,15 @@
+
+@import 'components';
+@import 'breakpoints';
+
+@mixin makeSite() {
+	@each $breakpoint in $breakpoints {
+		.breakpoint#{nth($breakpoint,1)} {
+			@media (max-width: nth($breakpoint, 2)){
+				@include card($breakpoint: nth($breakpoint,2));
+			}
+		}
+	}
+}
+
+@include makeSite();

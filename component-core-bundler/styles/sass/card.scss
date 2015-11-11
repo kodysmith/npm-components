@@ -1,0 +1,10 @@
+// card component
+
+@mixin card($breakpoint:600px){
+	.card {
+		width:$breakpoint;
+		height:$breakpoint - 100;
+		background-color:white;
+		font-weight:bolder;
+	}
+}
