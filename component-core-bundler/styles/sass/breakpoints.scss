@@ -13,7 +13,7 @@
     }
 }
 
-$breakpoints: '1' 1024px, '2' 2048px, '3' 1600px;
+$breakpoints: '0' 0px 500px, '1' 500px 1024px, '2' 2048px, '3' 1600px, '4' 9999px;
 
 
 @mixin stubHubContent($breakpoint: 600px) {

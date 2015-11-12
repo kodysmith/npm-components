@@ -1,0 +1,59 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'publish' ]
+2 info using npm@2.14.2
+3 info using node@v0.10.35
+4 verbose publish [ '.' ]
+5 silly cache add args [ '.', null ]
+6 verbose cache add spec .
+7 silly cache add parsed spec { raw: '.',
+7 silly cache add   scope: null,
+7 silly cache add   name: null,
+7 silly cache add   rawSpec: '.',
+7 silly cache add   spec: '/Users/kodsmith/dev/stubhub/app-npm-packages/components',
+7 silly cache add   type: 'directory' }
+8 verbose addLocalDirectory /Users/kodsmith/.npm/stubhub-components/1.0.0/package.tgz not in flight; packing
+9 verbose tar pack [ '/Users/kodsmith/.npm/stubhub-components/1.0.0/package.tgz',
+9 verbose tar pack   '/Users/kodsmith/dev/stubhub/app-npm-packages/components' ]
+10 verbose tarball /Users/kodsmith/.npm/stubhub-components/1.0.0/package.tgz
+11 verbose folder /Users/kodsmith/dev/stubhub/app-npm-packages/components
+12 info prepublish stubhub-components@1.0.0
+13 verbose addLocalTarball adding from inside cache /Users/kodsmith/.npm/stubhub-components/1.0.0/package.tgz
+14 silly cache afterAdd stubhub-components@1.0.0
+15 verbose afterAdd /Users/kodsmith/.npm/stubhub-components/1.0.0/package/package.json not in flight; writing
+16 verbose afterAdd /Users/kodsmith/.npm/stubhub-components/1.0.0/package/package.json written
+17 silly publish { name: 'stubhub-components',
+17 silly publish   version: '1.0.0',
+17 silly publish   description: 'the core sass declarations for StubHub!',
+17 silly publish   main: 'index.js',
+17 silly publish   scripts: { test: 'echo "Error: no test specified" && exit 1' },
+17 silly publish   author: '',
+17 silly publish   license: 'ISC',
+17 silly publish   private: true,
+17 silly publish   publishConfig: { registry: 'http://192.168.1.68:4873/' },
+17 silly publish   readme: 'ERROR: No README data found!',
+17 silly publish   _id: 'stubhub-components@1.0.0',
+17 silly publish   _shasum: 'f1fd00a1727b6e8591c6200c715880e5627fbd28',
+17 silly publish   _from: '.' }
+18 verbose getPublishConfig { registry: 'http://192.168.1.68:4873/' }
+19 verbose stack Error: This package has been marked as private
+19 verbose stack Remove the 'private' field from the package.json to publish it.
+19 verbose stack     at publish_ (/usr/local/lib/node_modules/npm/lib/publish.js:98:5)
+19 verbose stack     at Array.1 (/usr/local/lib/node_modules/npm/node_modules/slide/lib/bind-actor.js:15:8)
+19 verbose stack     at LOOP (/usr/local/lib/node_modules/npm/node_modules/slide/lib/chain.js:15:14)
+19 verbose stack     at LOOP (/usr/local/lib/node_modules/npm/node_modules/slide/lib/chain.js:14:28)
+19 verbose stack     at chain (/usr/local/lib/node_modules/npm/node_modules/slide/lib/chain.js:20:5)
+19 verbose stack     at /usr/local/lib/node_modules/npm/lib/publish.js:73:5
+19 verbose stack     at RES (/usr/local/lib/node_modules/npm/node_modules/inflight/inflight.js:23:14)
+19 verbose stack     at f (/usr/local/lib/node_modules/npm/node_modules/once/once.js:17:25)
+19 verbose stack     at /usr/local/lib/node_modules/npm/lib/cache.js:350:14
+19 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/write-file-atomic/index.js:29:15
+20 verbose cwd /Users/kodsmith/dev/stubhub/app-npm-packages/components
+21 error Darwin 14.5.0
+22 error argv "node" "/usr/local/bin/npm" "publish"
+23 error node v0.10.35
+24 error npm  v2.14.2
+25 error This package has been marked as private
+25 error Remove the 'private' field from the package.json to publish it.
+26 error If you need help, you may report this error at:
+26 error     <https://github.com/npm/npm/issues>
+27 verbose exit [ 1, true ]

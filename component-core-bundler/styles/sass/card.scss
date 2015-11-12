@@ -1,10 +1,26 @@
 // card component
 
 @mixin card($breakpoint:600px){
-	.card {
+
+  	.card {
 		width:$breakpoint;
 		height:$breakpoint - 100;
 		background-color:white;
 		font-weight:bolder;
+
 	}
+
+	// breakpoint exceptions
+  @if($breakpoint === 2){
+  	@extend 'card' {
+  		@include 'german';  '_german_card.scss';
+	}
+  }
+}
+
+
+
+#germanSite {
+
+
 }
