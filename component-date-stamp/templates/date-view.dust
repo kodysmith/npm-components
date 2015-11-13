@@ -1,0 +1,15 @@
+<div class="{dateType}">
+    <span class="date-container">
+        <span class="date-divider-top">
+
+        </span>
+        <span class="date-stamp-day">
+            {date.day}
+        </span>
+
+        <span class="date-stamp-month-dd">
+            {date.month}
+        </span>
+    </span>
+</div>
+

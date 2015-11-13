@@ -1,17 +1,13 @@
 var http = require('http'),
-    fs = require('fs');
+    fs = require('fs'),
+    duster = require('dusterjs');
+
 
 
 //TODO read in the file into a string
 exports.compileDust = function() {
-    var fs = require('fs');
-    fs.writeFile("/templates/date-stamp.js", "Hey there!", function(err) {
-        if(err) {
-            return console.log(err);
-        }
-
-        console.log("The file was saved!");
-    });
+    console.log('compiling dust');
+    duster('templates/','templates/compiled.js');
 }
 //TODO parse the string into an array
 exports.test = function() {

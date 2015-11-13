@@ -12,7 +12,6 @@
   ],
   "author": "Kody Smith",
   "license": "ISC",
-  "publishConfig":{"registry":"http://localhost:4873"},
   "bin": {
     "module-name": "./component-compiler"
   },
@@ -21,5 +20,8 @@
     "predeploy": "echo 'usage: node component-compiler install'",
     "postdeploy": ". build.sh",
     "prepublish": "echo 'usage: node component-compiler install'"
+  },
+  "dependencies": {
+    "sys":  "0.0.1"
   }
 }

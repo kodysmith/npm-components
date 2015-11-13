@@ -1,0 +1,19 @@
+//<div class="date-stamp">
+//<span class="date-divider-top"> </span>
+//<span class="date-stamp-day">
+//</span>
+//
+//<span class="date-stamp-month-dd">
+//</span>
+//</div>
+
+@mixin date-divider($height: 5px, $width: 100%, $background-color: orange, $display:block, $margin: 0 0 5px 0px) {
+  .date-divider-top {
+    height: $height;
+    background-color: $background-color;
+    width: $width;
+    display: $display;
+    margin: $margin;
+    @content;
+  }
+}

@@ -1,0 +1,43 @@
+//<div class="date-stamp">
+//<span class="date-divider-top"> </span>
+//<span class="date-stamp-day">
+//</span>
+//
+//<span class="date-stamp-month-dd">
+//</span>
+//</div>
+@import '_colors';
+
+@mixin date-stamp-day(
+  $font-size: 27px,
+  $width: 100%,
+  $color: $sh-date-divider,
+  $font-family: stubhub-knockout-50) {
+    .date-stamp-day {
+      width: $width;
+      color: $color;
+      font-size:$font-size;
+      font-family: $font-family;
+      @content;
+    }
+}
+
+
+@mixin date-stamp-month-dd(
+  $font-size: 12px,
+  $width: 100%,
+  $color: black,
+  $display: block,
+  $font-family: "HelveticaNeue-Medium, Helvetica Neue, Helvetica, Arial") {
+    .date-stamp-month-dd {
+      font-size: $font-size;
+      width: $width;
+      color: $color;
+      display: $display;
+      font-family: $font-family;
+      @content;
+    }
+    .date-extended-day {
+      display:inline-block;
+    }
+}

@@ -1,0 +1,54 @@
+@import 'partials/_colors';
+@import 'partials/_date-container';
+@import 'partials/_date-dividers';
+@import 'partials/_date-stamp-date';
+
+
+.date-stamp-standard {
+  @include date-container () {
+    @include date-divider($background-color:$sh-date-divider);
+    @include date-stamp-day($color:$sh-date-black);
+    @include date-stamp-month-dd($color:$sh-date-grey);
+  }
+}
+
+.date-stamp-white {
+  @include date-container () {
+    @include date-divider($background-color: $sh-date-divider);
+    @include date-stamp-day($color: $sh-date-white);
+    @include date-stamp-month-dd($color: $sh-date-white);
+  }
+}
+
+
+.date-stamp-blue {
+  @include date-container () {
+    @include date-divider($background-color: $sh-date-divider);
+    @include date-stamp-day($color: blue);
+    @include date-stamp-month-dd($color: blue);
+  }
+}
+
+
+.date-stamp-green {
+  @include date-container () {
+    @include date-divider($background-color: $sh-date-divider);
+    @include date-stamp-day($color: green, $font-size:15px);
+    @include date-stamp-month-dd($color: green, $font-size:10px);
+  }
+}
+
+.demo {
+  width: 100px;
+  display:inline-block;
+  float:left;
+  padding:50px;
+
+  &.white {
+    background-color:white;
+  }
+
+  &.black {
+    background-color:black;
+  }
+}

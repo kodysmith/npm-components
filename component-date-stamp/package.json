@@ -1,0 +1,33 @@
+{
+  "name": "component-date-stamp",
+  "version": "1.0.0",
+  "site": "stubhub",
+  "description": "date stamp component, including models, views, and css, less, sass",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "bundler",
+    "view"
+  ],
+  "author": "Kody Smith",
+  "license": "ISC",
+  "bin": {
+    "module-name": "./component-compiler"
+  },
+  "scripts": {
+    "start": "echo 'start'",
+    "predeploy": "sass ./styles/scss/compiler.scss > ./styles/css/styles.css",
+    "postdeploy": "",
+    "prepublish": ""
+  },
+  "dependencies": {
+    "sys":  "0.0.1",
+    "fs":  "0.0.2",
+    "path":  "0.12.7",
+    "dust": "0.3.0",
+    "dusterjs": "0.3.2",
+    "sass": "latest"
+  }
+}

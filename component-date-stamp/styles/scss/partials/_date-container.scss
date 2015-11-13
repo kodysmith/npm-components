@@ -1,0 +1,18 @@
+//<div class="date-stamp">
+//<span class="date-divider-top"> </span>
+//<span class="date-stamp-day">
+//</span>
+//
+//<span class="date-stamp-month-dd">
+//</span>
+//</div>
+@import '_colors';
+
+
+@mixin date-container($height: auto, $width: 54px) {
+  &.date-container {
+    width: $width;
+    height: $height;
+    @content;
+  }
+}
