@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <link href="../compiled/styles.css" rel="stylesheet">
+    <script type="text/javascript" src="../node_modules/requirejs/require.js"></script>
+
+    <title>date-stamp</title>
+</head>
+<body>
+<script type="text/javascript">
+    var SH = {};
+    requirejs.config({
+
+        paths: {
+            baseDir: '../scripts/',
+            dust: ['../node_modules/dustjs-linkedin/lib/dust'],
+            dateStampView: ['../scripts/views/date-view'],
+            dateStamp: ['../scripts/date-stamp'],
+            dateStampModel: ['../scripts/models/date-model'],
+            templateBundle: ['../compiled/template-bundle'],
+            demoData: ['../scripts/mock/demo']
+        }
+    });
+    require(['dateStamp',
+        'dateStampView',
+        'dateStampModel',
+        'dust'], function(){
+        require(['date-stamp','templateBundle'], function(dateStamp,tpl) {
+                SH.dateStamp = dateStamp;
+                SH.template = tpl;
+
+
+        });
+    });
+</script>
+
+</body>
+</html>

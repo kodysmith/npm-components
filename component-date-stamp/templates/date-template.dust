@@ -1,5 +1,5 @@
 <div class="{dateType}">
-    <span class="date-container">
+    <span class="{dateType} date-container">
         <span class="date-divider-top">
 
         </span>

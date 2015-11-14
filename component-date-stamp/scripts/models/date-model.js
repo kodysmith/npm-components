@@ -1,24 +1,23 @@
-/**
- * Created by kodsmith on 11/12/15.
- */
+define('date-stamp-model',
+    (['core-model'],
+    function() {
+        var dateStampModel = function(context) {
 
-function date (options){
-    var self = this;
+            var defaults = {
+                setDay:function(day){this.day = day},
+                setMonth: function(month){this.month = month},
+                setYear: function(year){this.year = year},
+                getDay: function(){return this.day},
+                getMonth: function(){return this.month},
+                getYear: function(){return this.year}
+            };
 
-    self.locale = 'en-us';
-    self.style = 'standard';
-    self.date = {
-        day: 'TBD',
-        month: ''
-    };
+            for(value in context){
+                defaults[value] = context[value];
+            }
+            return defaults;
+        }
 
-    options = options || false;
-
-    if(options){
-        self.locale = options.locale || self.locale;
-        self.style = options.style || self.style;
-        self.date = options.date || self.date;
-    }
-
-    return self;
-}
+        return dateStampModel;
+    })
+)

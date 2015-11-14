@@ -5,7 +5,7 @@ var http = require('http'),
 //TODO read in the file into a string
 exports.compileDust = function() {
     var fs = require('fs');
-    fs.writeFile("/templates/date-stamp.js", "Hey there!", function(err) {
+    fs.writeFile("/date-stamp.js", "Hey there!", function(err) {
         if(err) {
             return console.log(err);
         }

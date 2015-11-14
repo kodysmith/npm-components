@@ -1,14 +1,3 @@
-exports.printMsg = function() {
-	console.log("This message is from the package");
-}
+var DateStamp = {test:function(){console.log('test'); return "test"}};
 
-var grunt = require('grunt');
-
-grunt.registerTask('default', 'Log some stuff.', function() {
-    console.log('stuff');
-});
-
-exports.build = function() {
-	grunt.tasks(['default']);
-}
-
+module.exports.dateStamp = function(){console.log('datestamp'); return "dateztamp"};
