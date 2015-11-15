@@ -8,4 +8,3 @@ exports.card = require('./scripts/js/card.js');
 var shell = require('sys');
 
 
-shell.

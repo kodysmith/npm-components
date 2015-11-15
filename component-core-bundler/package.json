@@ -22,6 +22,7 @@
     "prepublish": "echo 'usage: node component-compiler install'"
   },
   "dependencies": {
-    "sys":  "0.0.1"
+    "sys":  "0.0.1",
+    "component-date-stamp": "1.0.0"
   }
 }
