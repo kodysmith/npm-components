@@ -1,49 +1,66 @@
     // The templates are already registered, so we are ready to render!
 
-define('date-view',([], function() {
-    var DateView = function (attributes) {
+define('date-view',(['date-model'], function(DateModel) {
 
-
-        var exposure = {
-            init:init,
-            render:render,
-            extend:extend
-            },
-            attributes = attributes || {};
-
-        var __construct = function(attributes) {
-            injectProperties(attributes);
-        }(attributes);
-
-        function context() {
-            return attributes;
-        };
-
-        function init(options) {
-            attributes = options || {};
-        };
-
-        function render() {
-            dust.render('dateStampTemplate', context(), function(err, out) { console.log(err + ' ' + out); document.body.innerHTML += out;});
-            // Render the view
-
-        };
+    function DateView(options) {
+        (function __constructor () {
+            injectProperties(options);
+        })();
 
         function injectProperties(options, object){
-            var extendingObject = object || self;
+            var extendingObject = object || DateView;
             for(option in options){
                 extendingObject[option] = options[option];
             }
         };
 
-        function extend(options) {
-            var newInstance = new DateView;
-                injectProperties(options, newInstance);
-            return newInstance;
-        }
+        function parseTemplate(template, context) {
 
-        return exposure;
-    }
+            var resultHTML = '';
+
+            dust.render(
+                template,
+                context,
+                function(err, out) {
+                    console.log(err + ' ' + out);
+                    resultHTML = out;
+                });
+            return resultHTML;
+        };
+
+        return {
+            init: function (options) {
+                this.options = options || {};
+            },
+
+            model: new DateModel(),
+
+            template: 'dateStampTemplate',
+
+            element: null,
+
+            render: function (element) {
+                    var self = this,
+                        selectedElement = element || this.element;
+
+                    if(selectedElement)
+                        selectedElement.innerHTML = parseTemplate(this.template, this.options);
+                    // Render the view
+            },
+
+            extend: function(options) {
+                var newInstance = clone(this);
+                injectProperties(options, newInstance);
+                return function(context){ injectProperties(context, newInstance); return newInstance};
+            },
+
+            getHTML:function() {
+                var dateHTML = '';
+                    dateHTML = parseTemplate(this.template, this.options);
+                return dateHTML;
+            }
+        }
+    };
 
     return DateView;
 }))

@@ -12,8 +12,10 @@ define('date-stamp-model',
                 getYear: function(){return this.year}
             };
 
-            for(value in context){
-                defaults[value] = context[value];
+            if(typeof context == 'object'){
+                for(value in context){
+                    defaults[value] = context[value];
+                }
             }
             return defaults;
         }

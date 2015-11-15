@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <link href="../compiled/styles.css" rel="stylesheet">
     <script type="text/javascript" src="../node_modules/requirejs/require.js"></script>
-
+    <style rel="stylesheet">
+        .date-stamp-white:
+    </style>
     <title>date-stamp</title>
 </head>
 <body>
@@ -22,18 +24,89 @@
             demoData: ['../scripts/mock/demo']
         }
     });
-    require(['dateStamp',
+    require([
+        'dust',
         'dateStampView',
         'dateStampModel',
-        'dust'], function(){
-        require(['date-stamp','templateBundle'], function(dateStamp,tpl) {
-                SH.dateStamp = dateStamp;
-                SH.template = tpl;
+        'dateStamp',
+
+
+        ], function(){
+        require(['date-stamp','templateBundle'], function(dateStamp) {
+
+
+
+
+            var versions = ['green','standard','blue','white'],
+                version = versions[1],
+                data = [
+                    {date:{day:'FRI',month:'DEC 1'}, dateType:'date-stamp-' + version + ' date-container'},
+                    {date:{day:'FRI',month:'DEC 20'}, dateType:'date-stamp-' + version + ' date-container'},
+                    {date:{day:'FRI+',month:'DEC 1 - JAN 1'}, dateType:'date-stamp-' + version + ' date-container'},
+                    {date:{day:'FRI+',month:'DEC 1 - JAN 1 2016'}, dateType:'date-stamp-' + version + ' date-container'},
+                    {date:{day:'FRI+',month:'DEC 20 - JAN 20'}, dateType:'date-stamp-' + version + ' date-container'},
+                    {date:{day:'FRI+',month:'DEC 20 - JAN 20 2016'}, dateType:'date-stamp-' + version + ' date-container'},
+                    {date:{day:'TBD',month:''}, dateType:'date-stamp-' + version + ' date-container'},
+                    {date:{day:'TBD',month:'2016'}, dateType:'date-stamp-' + version + ' date-container'},
+                    {date:{day:'TBD',month:'DEC 2016'}, dateType:'date-stamp-' + version + ' date-container'},
+                ],
+                models = [];
+
+
+
+            for(value in data) {
+                var convenienceHandle = new dateStamp(data[value]);
+                convenienceHandle.view.element = document.body;
+                models.push(convenienceHandle);
+            };
+
+            function newDateBlock(backgroundColor) {
+                var bgColor = backgroundColor || 'white',
+                        dateDemoContainer = document.createElement('div');
+                        dateDemoContainer.className = 'dateDemoContainer';
+                        dateDemoContainer.style.backgroundColor = bgColor;
+                        dateDemoContainer.style.margin = '20px';
+                    return dateDemoContainer;
+            };
+
+            function DateBlockColumn(backgroundColor) {
+                var bgColor = backgroundColor || 'white',
+                        dateBlockColumn = document.createElement('div');
+                        dateBlockColumn.className = 'dateBlockColumn';
+                        dateBlockColumn.style.backgroundColor = bgColor;
+                        dateBlockColumn.style.margin = '20px';
+                        dateBlockColumn.style.width = '100px';
+                return dateBlockColumn;
+            };
+
+
+
+
+            function renderAll(){
+                    var backgrounds = ['white','black'];
+                    var col = 0;
+                    for(version in versions) {
+                        console.log('version:'+version);
+                        var dateBlockColumn = DateBlockColumn(backgrounds[col]);
+                        document.body.appendChild(dateBlockColumn);
+                        col++;
+                        for(model in models) {
+
+                            var container = newDateBlock(version);
+                            dateBlockColumn.appendChild(container);
+                            models[model].view.element = container;
+                            models[model].render();
+
+                        }
+                    };
+                };
+
+                renderAll();
 
 
         });
     });
 </script>
-
+<div class="event"></div>
 </body>
 </html>
