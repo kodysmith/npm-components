@@ -33,11 +33,11 @@ define('date-view',(['date-model'], function(DateModel) {
                 this.options = options || {};
             },
 
-            model: new DateModel(),
+            model: new DateModel(options),
 
             template: 'dateStampTemplate',
 
-            element: null,
+            element: options.element || null,
 
             render: function (element) {
                     var self = this,

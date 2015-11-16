@@ -1,11 +1,14 @@
 {
   "name": "component-date-stamp",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "site": "stubhub",
   "description": "date stamp component, including models, views, and css, less, sass",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "publishConfig": {
+    "registry": "http://localhost:4873"
   },
   "keywords": [
     "bundler",
@@ -14,15 +17,13 @@
   "author": "Kody Smith",
   "license": "ISC",
   "bin": {
-    "module-name": "./component-compiler"
   },
   "scripts": {
     "start": "echo 'start'",
-    "compile-sass": "sass ./styles/scss/compiler.scss > ./compiled/styles.css;",
-    "compile-dust": "dustc --name=dateStampTemplate date-template.dust > ../compiled/template-bundle.js",
+    "compile-sass": "sass styles/scss/compiler.scss > compiled/styles.css;",
+    "compile-dust": "dustc --name=dateStampTemplate templates/date-template.dust > compiled/template-bundle.js",
     "compile-all": "npm run compile-sass; npm run compile-dust",
-    "prepublish": "",
-    "registry":"http://locahost:4873"
+    "prepublish": ""
   },
   "dependencies": {
     "sys":  "0.0.1",

@@ -1,14 +1,14 @@
 {
   "name": "stubhub-core-sass",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "the core sass declarations for StubHub!",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Kody Smith",
   "license": "ISC",
-  "private": true,
+  "private": false,
   "publishConfig": {
     "registry": "http://localhost:4873/"
   }

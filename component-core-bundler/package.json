@@ -24,5 +24,8 @@
   "dependencies": {
     "sys":  "0.0.1",
     "component-date-stamp": "1.0.0"
+  },
+  "publishConfig": {
+    "registry": "http://localhost:4873"
   }
 }

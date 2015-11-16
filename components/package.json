@@ -10,6 +10,9 @@
   "license": "ISC",
   "private": true,
   "publishConfig": {
-    "registry": "http://192.168.1.68:4873/"
+    "registry": "http://localhost:4873/"
+  },
+  "dependancies": {
+     "component-date-stamp": "latest"
   }
 }

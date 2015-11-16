@@ -1,0 +1,70 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'install' ]
+2 info using npm@2.14.2
+3 info using node@v0.10.35
+4 verbose readDependencies loading dependencies from /Users/kodsmith/dev/stubhub/app-npm-packages/component-core-bundler/package.json
+5 warn package.json component-core-bundler@1.0.0 No repository field.
+6 warn package.json component-core-bundler@1.0.0 No README data
+7 warn package.json component-core-bundler@1.0.0 No bin file found at ./component-compiler
+8 verbose install where, deps [ '/Users/kodsmith/dev/stubhub/app-npm-packages/component-core-bundler',
+8 verbose install   [ 'sys', 'component-date-stamp' ] ]
+9 verbose install where, peers [ '/Users/kodsmith/dev/stubhub/app-npm-packages/component-core-bundler',
+9 verbose install   [] ]
+10 verbose installManyTop reading for lifecycle /Users/kodsmith/dev/stubhub/app-npm-packages/component-core-bundler/package.json
+11 info preinstall component-core-bundler@1.0.0
+12 verbose installManyTop reading scoped package data from /Users/kodsmith/dev/stubhub/app-npm-packages/component-core-bundler/node_modules/sys/package.json
+13 info package.json sys@0.0.1 No repository field.
+14 info package.json sys@0.0.1 No README data
+15 info package.json sys@0.0.1 license should be a valid SPDX license expression
+16 verbose readDependencies loading dependencies from /Users/kodsmith/dev/stubhub/app-npm-packages/component-core-bundler/package.json
+17 verbose targetResolver reading package data from /Users/kodsmith/dev/stubhub/app-npm-packages/component-core-bundler/node_modules/sys/package.json
+18 verbose already installed skipping sys@0.0.1 /Users/kodsmith/dev/stubhub/app-npm-packages/component-core-bundler
+19 silly cache add args [ 'component-date-stamp@1.0.0', null ]
+20 verbose cache add spec component-date-stamp@1.0.0
+21 silly cache add parsed spec { raw: 'component-date-stamp@1.0.0',
+21 silly cache add   scope: null,
+21 silly cache add   name: 'component-date-stamp',
+21 silly cache add   rawSpec: '1.0.0',
+21 silly cache add   spec: '1.0.0',
+21 silly cache add   type: 'version' }
+22 silly addNamed component-date-stamp@1.0.0
+23 verbose addNamed "1.0.0" is a plain semver version for component-date-stamp
+24 silly mapToRegistry name component-date-stamp
+25 silly mapToRegistry using default registry
+26 silly mapToRegistry registry http://localhost:4873/
+27 silly mapToRegistry uri http://localhost:4873/component-date-stamp
+28 verbose addNameVersion registry:http://localhost:4873/component-date-stamp not in flight; fetching
+29 verbose request uri http://localhost:4873/component-date-stamp
+30 verbose request no auth needed
+31 info attempt registry request try #1 at 11:37:33
+32 verbose request using bearer token for auth
+33 verbose request id aec5b0b10728618b
+34 verbose etag "036dba862381144d340aa456001406c4"
+35 http request GET http://localhost:4873/component-date-stamp
+36 http 304 http://localhost:4873/component-date-stamp
+37 silly get cb [ 304,
+37 silly get   { 'x-powered-by': 'Sinopia/1.4.0',
+37 silly get     etag: '"036dba862381144d340aa456001406c4"',
+37 silly get     'x-status-cat': 'http://flic.kr/p/aXY3dH',
+37 silly get     date: 'Mon, 16 Nov 2015 19:37:33 GMT',
+37 silly get     connection: 'keep-alive' } ]
+38 verbose etag http://localhost:4873/component-date-stamp from cache
+39 verbose get saving component-date-stamp to /Users/kodsmith/.npm/localhost_4873/component-date-stamp/.cache.json
+40 verbose stack Error: version not found: component-date-stamp@1.0.0
+40 verbose stack     at setData (/usr/local/lib/node_modules/npm/lib/cache/add-named.js:137:12)
+40 verbose stack     at RES (/usr/local/lib/node_modules/npm/node_modules/inflight/inflight.js:23:14)
+40 verbose stack     at f (/usr/local/lib/node_modules/npm/node_modules/once/once.js:17:25)
+40 verbose stack     at fixName (/usr/local/lib/node_modules/npm/lib/cache/add-named.js:29:5)
+40 verbose stack     at saved (/usr/local/lib/node_modules/npm/lib/cache/caching-client.js:173:7)
+40 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/graceful-fs/polyfills.js:210:7
+40 verbose stack     at Object.oncomplete (fs.js:108:15)
+41 verbose statusCode 404
+42 verbose cwd /Users/kodsmith/dev/stubhub/app-npm-packages/component-core-bundler
+43 error Darwin 14.5.0
+44 error argv "node" "/usr/local/bin/npm" "install"
+45 error node v0.10.35
+46 error npm  v2.14.2
+47 error version not found: component-date-stamp@1.0.0
+48 error If you need help, you may report this error at:
+48 error     <https://github.com/npm/npm/issues>
+49 verbose exit [ 1, true ]
